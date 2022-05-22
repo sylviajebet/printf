@@ -1,0 +1,25 @@
+.TH man 3 "22 May 2022" "ALX PROGRAMME" "_PRINTF"
+.SH NAME
+_printf - formats and writes a string, character or integer to stdout
+.SH SYNOPSIS
+#include "main.h"
+.br
+#include <stdarg.h>
+.br
+#include <stdlib.h>
+.br
+.br
+int _printf(const char *format, ...)
+.SH DESCRIPTION
+
+.SS Return value
+.br
+
+
+.SS Format string
+
+.br
+.SH BUGS
+
+.SH AUTHORS
+Sylvia Kipkemoi and Debra Obondo,Cohort 6.
