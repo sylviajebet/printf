@@ -1,12 +1,12 @@
 #include "main.h"
 
-unsigned int convert_di(va_list args, buffer_t *output,
+unsigned int convert_di(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_b(va_list args, buffer_t *output,
+unsigned int convert_b(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_u(va_list args, buffer_t *output,
+unsigned int convert_u(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
-unsigned int convert_o(va_list args, buffer_t *output,
+unsigned int convert_o(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 
 /**
@@ -17,11 +17,11 @@ unsigned int convert_o(va_list args, buffer_t *output,
  * @wid: A width modifier.
  * @prec: A precision modifier.
  * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @output: A buff_t struct containing a character array.
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_di(va_list args, buffer_t *output,
+unsigned int convert_di(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
 	long int d, copy;
@@ -89,11 +89,11 @@ unsigned int convert_di(va_list args, buffer_t *output,
  * @wid: A width modifier.
  * @prec: A precision modifier.
  * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @output: A buff_t struct containing a character array.
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_b(va_list args, buffer_t *output,
+unsigned int convert_b(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned int num;
@@ -113,11 +113,11 @@ unsigned int convert_b(va_list args, buffer_t *output,
  * @wid: A width modifier.
  * @prec: A precision modifier.
  * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @output: A buff_t struct containing a character array.
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_o(va_list args, buffer_t *output,
+unsigned int convert_o(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned long int num;
@@ -151,11 +151,11 @@ unsigned int convert_o(va_list args, buffer_t *output,
  * @wid: A width modifier.
  * @prec: A precision modifier.
  * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @output: A buff_t struct containing a character array.
  *
  * Return: The number of bytes stored to the buffer.
  */
-unsigned int convert_u(va_list args, buffer_t *output,
+unsigned int convert_u(va_list args, buff_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len)
 {
 	unsigned long int num;

@@ -1,19 +1,19 @@
 #include "main.h"
 
-unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
-void free_buffer(buffer_t *output);
-buffer_t *init_buffer(void);
+unsigned int _memcpy(buff_t *output, const char *src, unsigned int n);
+void free_buffer(buff_t *output);
+buff_t *init_buffer(void);
 
 /**
  * _memcpy - Copies n bytes from memory area src to
- *           the buffer contained in a buffer_t struct.
- * @output: A buffer_t struct.
+ *           the buffer contained in a buff_t struct.
+ * @output: A buff_t struct.
  * @src: A pointer to the memory area to copy.
  * @n: The number of bytes to be copied.
  *
  * Return: The number of bytes copied.
  */
-unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n)
+unsigned int _memcpy(buff_t *output, const char *src, unsigned int n)
 {
 	unsigned int index;
 
@@ -37,25 +37,25 @@ unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n)
 }
 
 /**
- * free_buffer - Frees a buffer_t struct.
- * @output: The buffer_t struct to be freed.
+ * free_buffer - Frees a buff_t struct.
+ * @output: The buff_t struct to be freed.
  */
-void free_buffer(buffer_t *output)
+void free_buffer(buff_t *output)
 {
 	free(output->start);
 	free(output);
 }
 
 /**
- * init_buffer - Initializes a variable of struct type buffer_t.
+ * init_buffer - Initializes a variable of struct type buff_t.
  *
- * Return: A pointer to the initialized buffer_t.
+ * Return: A pointer to the initialized buff_t.
  */
-buffer_t *init_buffer(void)
+buff_t *init_buffer(void)
 {
-	buffer_t *output;
+	buff_t *output;
 
-	output = malloc(sizeof(buffer_t));
+	output = malloc(sizeof(buff_t));
 	if (output == NULL)
 		return (NULL);
 
